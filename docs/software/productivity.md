@@ -24,7 +24,16 @@
 | **Guide** | [Notepad++ Docs](https://npp-user-manual.org/) |
 | **Use Case** | Advanced text editor. Essential for editing arr stack config files, scripts, and anything Windows Notepad can't handle |
 
-### Surfshark
+### Windhawk
+| | |
+|---|---|
+| **WinGet ID** | `RamensoftwareInc.Windhawk` |
+| **Download** | [windhawk.net](https://windhawk.net/) |
+| **Guide** | [Windhawk Docs](https://windhawk.net/docs) |
+| **Use Case** | Windows customisation and tweaking via community mods |
+| **Installed mods** | Better file sizes in Explorer (v1.5) — shows folder sizes using Everything indexing; Taskbar Clock Customization (v1.7.1) — shows CPU %, network up/down speeds in taskbar clock |
+
+
 | | |
 |---|---|
 | **WinGet ID** | `Surfshark.Surfshark` |

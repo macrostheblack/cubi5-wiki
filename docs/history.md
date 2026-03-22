@@ -199,3 +199,25 @@ Rebooted after Chipset and ME drivers. Final reboot after all drivers complete.
   - Cinema Trailers: personal preference
   - Prefer local metadata: disabled
   - Local posters: enabled
+
+### Quality Settings (Radarr & Sonarr)
+
+- Disabled Remux and 4K quality tiers in both Radarr and Sonarr profiles
+- Active quality tiers: Bluray-1080p, WEB 1080p, Bluray-720p, WEB 720p
+- Set file size limits in Settings → Quality per TRaSH guide with middle-tier preferred values:
+
+| Quality | Min (MB/min) | Preferred (MB/min) | Max (MB/min) |
+|---------|-------------|-------------------|-------------|
+| WEBRip-720p | 12.5 | 26 | 40 |
+| WEBDL-720p | 12.5 | 26 | 40 |
+| Bluray-720p | 25.7 | 53 | 80 |
+| WEBRip-1080p | 12.5 | 36 | 60 |
+| WEBDL-1080p | 12.5 | 36 | 60 |
+| Bluray-1080p | 50.8 | 85 | 120 |
+
+### Additional Software
+
+- Installed **Windhawk** — Windows tweaking tool
+  - Mod: Better file sizes in Explorer (v1.5) — folder sizes via Everything indexing
+  - Mod: Taskbar Clock Customization (v1.7.1) — CPU %, network speeds in taskbar
+- Letterboxd watchlist RSS feed added to Radarr as Import List
