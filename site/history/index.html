@@ -1,0 +1,1487 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Wiki and documentation for the MSI Cubi 5 12M home server">
+      
+      
+      
+      
+        <link rel="prev" href="../storage/">
+      
+      
+        <link rel="next" href="../resources/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Setup History - Cubi 5 Home Server</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setup-history" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Cubi 5 Home Server" class="md-header__button md-logo" aria-label="Cubi 5 Home Server" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cubi 5 Home Server
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setup History
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../software/arr-stack/" class="md-tabs__link">
+          
+  
+  
+  Software
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../storage/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Storage
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Setup History
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../resources/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Cubi 5 Home Server" class="md-nav__button md-logo" aria-label="Cubi 5 Home Server" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Cubi 5 Home Server
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software/arr-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Media & Arr Stack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software/system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System & Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software/files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software/productivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Productivity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software/browser-media/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browser & Media
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup History
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup History
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2026-03-21-initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-03-21 — Initial Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-03-21 — Initial Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#os-tiny11-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OS — Tiny11 Build
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drivers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows Updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wiki-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wiki Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#folder-structure-media-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Folder Structure &amp; Media Cleanup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-03-21-arr-stack-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-03-21 — Arr Stack Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-03-21 — Arr Stack Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qbittorrent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        qBittorrent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prowlarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prowlarr
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Radarr
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sonarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sonarr
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lidarr
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bazarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bazarr
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autostart-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autostart Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpn-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VPN Binding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indexers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tinymediamanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tinyMediaManager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library Import
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2026-03-21-initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-03-21 — Initial Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-03-21 — Initial Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#os-tiny11-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OS — Tiny11 Build
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drivers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows Updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wiki-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wiki Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#folder-structure-media-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Folder Structure &amp; Media Cleanup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-03-21-arr-stack-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-03-21 — Arr Stack Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-03-21 — Arr Stack Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qbittorrent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        qBittorrent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prowlarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prowlarr
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Radarr
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sonarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sonarr
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lidarr
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bazarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bazarr
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autostart-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autostart Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpn-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VPN Binding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indexers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tinymediamanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tinyMediaManager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library Import
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="setup-history">Setup History</h1>
+<p>A full log of everything done to the Cubi 5, in chronological order.</p>
+<hr />
+<h2 id="2026-03-21-initial-setup">2026-03-21 — Initial Setup</h2>
+<h3 id="os-tiny11-build">OS — Tiny11 Build</h3>
+<ul>
+<li>Downloaded Windows 11 ISO from Microsoft</li>
+<li>Built debloated Tiny11 image using <a href="https://github.com/ntdevlabs/tiny11builder">tiny11builder</a> (<code>tiny11maker.ps1</code>)</li>
+<li>Mounted Windows 11 ISO to drive <code>F:</code></li>
+<li>Used external HDD as scratch disk</li>
+<li>Selected image index <strong>6 (Windows 11 Pro)</strong></li>
+<li>Script removed: Edge, OneDrive, Xbox, Clipchamp, Teams, Cortana, and other bloat</li>
+<li>Disabled telemetry, Copilot, sponsored apps, BitLocker auto-encryption</li>
+<li>Bypassed TPM/Secure Boot/RAM requirements via registry</li>
+<li>Flashed <code>tiny11.iso</code> to USB using <strong>Rufus</strong></li>
+<li>Rufus options selected: Remove TPM/RAM/Secure Boot requirement, Remove Microsoft account requirement, Disable BitLocker automatic encryption</li>
+<li>Booted Cubi 5 from USB (boot menu via <code>Delete</code> / <code>F11</code> on POST)</li>
+<li><strong>Note:</strong> MSI Fast Boot was left disabled for USB boot to work</li>
+<li>Completed OOBE with local account (<code>sorce</code>) — no Microsoft account required (handled by tiny11's <code>autounattend.xml</code>)</li>
+</ul>
+<h3 id="drivers">Drivers</h3>
+<p>Downloaded all drivers from <a href="https://www.msi.com/Business-Productivity-PC/Cubi-5-12M/support#driver">MSI Cubi 5 12M Support Page</a>.</p>
+<p>Installed in this order:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Driver</th>
+<th>Version</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>WiFi</td>
+<td>22.150.0.3</td>
+<td>⚠️ Installed out of order by mistake — reinstalled at step 9</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Chipset</td>
+<td>10.1.19159.8331</td>
+<td>Rebooted after</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ME (Intel Management Engine)</td>
+<td>2420.6.16.0</td>
+<td>Rebooted after</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Serial IO</td>
+<td>30.100.2212.4</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5</td>
+<td>IGD (Intel Graphics)</td>
+<td>31.0.101.3301</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Audio (UAD)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7</td>
+<td>LAN</td>
+<td>10062_10112022</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Bluetooth</td>
+<td>22.150.0.6</td>
+<td>—</td>
+</tr>
+<tr>
+<td>9</td>
+<td>WiFi</td>
+<td>22.150.0.3</td>
+<td>Reinstalled to ensure clean install over correct chipset base</td>
+</tr>
+<tr>
+<td>10</td>
+<td>MSI Center</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Rebooted after Chipset and ME drivers. Final reboot after all drivers complete.</p>
+<p><strong>Skipped:</strong> DTT (Dynamic Tuning — not needed for always-on server), Intel GNA (AI inference — not needed)</p>
+<h3 id="windows-updates">Windows Updates</h3>
+<ul>
+<li>Ran Windows Update after driver installation</li>
+<li>Completed all available updates before proceeding to software installation</li>
+</ul>
+<h3 id="software-installation">Software Installation</h3>
+<ul>
+<li>Installed UniGetUI via WinGet:
+  <code>winget install --exact --id Devolutions.UniGetUI --source winget</code></li>
+<li>Used UniGetUI to bulk install all applications via WinGet:</li>
+<li>Plex Media Server, Radarr, Sonarr, Lidarr, Bazarr, Prowlarr, qBittorrent</li>
+<li>CrystalDiskInfo, WizTree, HWiNFO64</li>
+<li>Everything (voidtools), Bulk Rename Utility</li>
+<li>PowerToys, AutoHotkey, Notepad++, Surfshark</li>
+<li>Firefox, VLC</li>
+<li>Manual installs: WinRAR (licence), ProcessLasso (licence), MSI Center (from driver package), EverythingToolbar (GitHub release)</li>
+<li>Exported UniGetUI bundle (.ubundle) saved to USB drive for future reinstalls</li>
+<li>Fixed permissions on <code>C:\ProgramData</code> for arr apps (Prowlarr, Radarr, Sonarr, Lidarr, Bazarr) via PowerShell script</li>
+<li>Script saved at <code>C:\Users\sorce\Desktop\Claude_Brain\fix-arr-permissions.ps1</code></li>
+</ul>
+<h3 id="wiki-setup">Wiki Setup</h3>
+<ul>
+<li>Created this wiki using MkDocs + Material theme</li>
+<li>Wiki files located at <code>C:\Users\sorce\Desktop\Claude_Brain\Wiki</code></li>
+<li>To be hosted on GitHub Pages</li>
+</ul>
+<h3 id="folder-structure-media-cleanup">Folder Structure &amp; Media Cleanup</h3>
+<ul>
+<li>Created Miranda (E:\) folder structure for downloads:</li>
+<li><code>E:\Music\</code>, <code>E:\Downloads\Complete\Movies\</code>, <code>E:\Downloads\Complete\TV\</code>, <code>E:\Downloads\Complete\Music\</code>, <code>E:\Downloads\Incomplete\</code></li>
+<li>Cleaned up <code>D:\Movies</code> using PowerShell script (<code>cleanup-movies-run.ps1</code>):</li>
+<li>Wrapped 22 loose .mkv files into their own subfolders</li>
+<li>Renamed 2 <code>www.</code> prefixed folders</li>
+<li>Deleted 5 stray <code>.parts</code> files</li>
+<li>Cleaned up <code>D:\TV Shows</code> using PowerShell script (<code>cleanup-tv-run.ps1</code>):</li>
+<li>Wrapped 2 loose video files into their own subfolders</li>
+<li>Renamed 1 <code>www.</code> prefix folder</li>
+<li>Deleted 1 stray <code>.parts</code> file</li>
+<li>Cleanup scripts saved at <code>C:\Users\sorce\Desktop\Claude_Brain\</code></li>
+</ul>
+<hr />
+<h2 id="2026-03-21-arr-stack-configuration">2026-03-21 — Arr Stack Configuration</h2>
+<h3 id="qbittorrent">qBittorrent</h3>
+<ul>
+<li>Configured download paths: Default save → <code>E:\Downloads\Complete</code>, Incomplete → <code>E:\Downloads\Incomplete</code></li>
+<li>Set saving management to <code>Automatic</code></li>
+<li>Added categories: <code>movies</code> → <code>E:\Downloads\Complete\Movies</code>, <code>tv</code> → <code>E:\Downloads\Complete\TV</code>, <code>music</code> → <code>E:\Downloads\Complete\Music</code></li>
+<li>Connection: TCP only, UPnP disabled, random port disabled</li>
+<li>BitTorrent: Allow encryption, anonymous mode disabled, seeding limits managed by arr apps</li>
+<li>Web UI: Bypass auth for localhost enabled, CSRF protection disabled</li>
+</ul>
+<h3 id="prowlarr">Prowlarr</h3>
+<ul>
+<li>Authentication set up (Forms login)</li>
+<li>Fixed <code>C:\ProgramData</code> permissions to allow launch</li>
+<li>Connected to Radarr, Sonarr, and Lidarr via API keys (Sync Level: Full Sync)</li>
+<li>Connected qBittorrent as download client</li>
+<li>Indexers: added later — see Indexers section below</li>
+</ul>
+<h3 id="radarr">Radarr</h3>
+<ul>
+<li>Authentication set up</li>
+<li>Media Management: Rename Movies enabled, naming scheme set per TRaSH guide</li>
+<li>Root folder: <code>D:\Movies</code></li>
+<li>Download client: qBittorrent (category: <code>movies</code>)</li>
+<li>Quality profile: HD Movies (Remux-1080p, Bluray-1080p, WEB 1080p, Bluray-720p, WEB 720p)</li>
+<li>Connected to Prowlarr</li>
+</ul>
+<h3 id="sonarr">Sonarr</h3>
+<ul>
+<li>Authentication set up</li>
+<li>Media Management: Rename Episodes enabled, naming scheme set per TRaSH guide</li>
+<li>Root folder: <code>D:\TV Shows</code></li>
+<li>Download client: qBittorrent (category: <code>tv</code>)</li>
+<li>Quality profile: HD TV</li>
+<li>Connected to Prowlarr</li>
+</ul>
+<h3 id="lidarr">Lidarr</h3>
+<ul>
+<li>Authentication set up</li>
+<li>Media Management: Rename Tracks enabled</li>
+<li>Root folder: <code>E:\Music</code></li>
+<li>Download client: qBittorrent (category: <code>music</code>)</li>
+<li>Connected to Prowlarr</li>
+<li>Artists to be added to library separately</li>
+</ul>
+<h3 id="bazarr">Bazarr</h3>
+<ul>
+<li>Authentication set up</li>
+<li>Connected to Sonarr (localhost:8989) and Radarr (localhost:7878) via API keys</li>
+<li>Language profile: English, cutoff English, minimum score 90</li>
+<li>Applied to both series and movies as default profile</li>
+<li>Providers added: OpenSubtitles.com, Subscene, Supersubtitles, TVSubtitles</li>
+<li>Subtitles stored alongside media files</li>
+<li>Automatic subtitle synchronisation enabled</li>
+<li>Applied English language profile to existing library (series + movies)</li>
+</ul>
+<h3 id="plex">Plex</h3>
+<ul>
+<li>Account created/signed in</li>
+<li>Libraries added:</li>
+<li>Movies → <code>D:\Movies</code> (agent: Plex Movie)</li>
+<li>TV Shows → <code>D:\TV Shows</code> (agent: Plex TV Series, ordering: TheTVDB)</li>
+<li>Music → <code>E:\Music</code></li>
+<li>Key settings per TRaSH guide:</li>
+<li>Hardware acceleration enabled (Intel QuickSync)</li>
+<li>Video preview thumbnails disabled (saves disk/CPU)</li>
+<li>Intro/credits detection enabled (scheduled task)</li>
+<li>Allow media deletion disabled (Radarr/Sonarr manage files)</li>
+<li>Scanner runs at lower priority</li>
+<li>Database cache: 1024MB</li>
+<li>Relay disabled</li>
+<li>HDR tone mapping enabled, algorithm: hable</li>
+<li>Initial library scan completed</li>
+</ul>
+<h3 id="autostart-configuration">Autostart Configuration</h3>
+<ul>
+<li>Confirmed Windows Services (Automatic) for: Bazarr, Lidarr, Prowlarr, Radarr</li>
+<li>Sonarr was running as standalone process conflicting with service — killed process, registered as Windows Service via <code>ServiceInstall.exe</code>, confirmed running after reboot</li>
+<li>Plex — Launch at Login enabled via system tray settings</li>
+<li>qBittorrent — shortcut added to <code>shell:startup</code>, configured to run minimised</li>
+<li>All services confirmed running after clean reboot</li>
+</ul>
+<h3 id="vpn-binding">VPN Binding</h3>
+<ul>
+<li>qBittorrent bound to <strong>SurfsharkWireGuard</strong> network interface</li>
+<li>Tools → Options → Advanced → Network Interface → SurfsharkWireGuard</li>
+<li>Surfshark protocol locked to WireGuard in Surfshark app settings</li>
+<li>Kill switch confirmed: qBittorrent loses connectivity when Surfshark disconnects</li>
+</ul>
+<h3 id="indexers">Indexers</h3>
+<ul>
+<li>Added <strong>TorrentLeech</strong> to Prowlarr as primary indexer</li>
+<li>Categories: Movies, Movies HD, Movies SD, TV, TV HD, TV SD</li>
+<li>Minimum seeders: 1</li>
+<li>Sync profile: Standard</li>
+<li>Synced automatically to Radarr and Sonarr</li>
+<li>Decision: TorrentLeech only for now, no public trackers — safer approach with VPN</li>
+</ul>
+<h3 id="tinymediamanager">tinyMediaManager</h3>
+<ul>
+<li>Installed tinyMediaManager v5</li>
+<li>Used to clean up and match existing movie and TV library before Radarr/Sonarr import</li>
+<li>Scrapers: TMDb for movies, TheTVDB for TV shows</li>
+<li>Ran on <code>D:\Movies</code> and <code>D:\TV Shows</code></li>
+</ul>
+<h3 id="library-import">Library Import</h3>
+<ul>
+<li>Radarr: existing movies imported from <code>D:\Movies</code> via Manual Import — Radarr now has ownership</li>
+<li>Sonarr: existing TV shows imported from <code>D:\TV Shows</code> via Manual Import — Sonarr now has ownership</li>
+<li>Plex account corrected from socerorsisle@gmail.com to adamshiggs97@gmail.com</li>
+<li>Plex settings verified per TRaSH guide:</li>
+<li>Client Network: IPv4 only</li>
+<li>Certification Country: Australia</li>
+<li>Cinema Trailers: personal preference</li>
+<li>Prefer local metadata: disabled</li>
+<li>Local posters: enabled</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

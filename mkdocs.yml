@@ -1,0 +1,26 @@
+site_name: Cubi 5 Home Server
+site_description: Wiki and documentation for the MSI Cubi 5 12M home server
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: purple
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Software:
+    - Media & Arr Stack: software/arr-stack.md
+    - System & Monitoring: software/system.md
+    - File Management: software/files.md
+    - Productivity: software/productivity.md
+    - Browser & Media: software/browser-media.md
+  - Storage: storage.md
+  - Setup History: history.md
+  - Resources: resources.md
